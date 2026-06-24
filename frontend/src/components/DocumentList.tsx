@@ -16,7 +16,7 @@ interface Document {
 
 const docTypeIcons: Record<string, { gradient: string; icon: React.ReactNode }> = {
   bill: {
-    gradient: 'from-orange-400 to-pink-500',
+    gradient: 'from-cyber-500/20 to-cyan-500/20',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <rect x="2" y="5" width="20" height="14" rx="2" />
@@ -25,7 +25,7 @@ const docTypeIcons: Record<string, { gradient: string; icon: React.ReactNode }> 
     ),
   },
   id_document: {
-    gradient: 'from-blue-400 to-indigo-500',
+    gradient: 'from-cyber-500/20 to-blue-500/20',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <rect x="3" y="4" width="18" height="16" rx="2" />
@@ -35,7 +35,7 @@ const docTypeIcons: Record<string, { gradient: string; icon: React.ReactNode }> 
     ),
   },
   certificate: {
-    gradient: 'from-green-400 to-emerald-500',
+    gradient: 'from-green-500/20 to-emerald-500/20',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <circle cx="12" cy="8" r="7" />
@@ -44,7 +44,7 @@ const docTypeIcons: Record<string, { gradient: string; icon: React.ReactNode }> 
     ),
   },
   offer_letter: {
-    gradient: 'from-purple-400 to-pink-500',
+    gradient: 'from-purple-500/20 to-pink-500/20',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
@@ -53,7 +53,7 @@ const docTypeIcons: Record<string, { gradient: string; icon: React.ReactNode }> 
     ),
   },
   bank_statement: {
-    gradient: 'from-teal-400 to-cyan-500',
+    gradient: 'from-cyan-500/20 to-blue-500/20',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <line x1="12" y1="1" x2="12" y2="23" />
@@ -62,7 +62,7 @@ const docTypeIcons: Record<string, { gradient: string; icon: React.ReactNode }> 
     ),
   },
   contract: {
-    gradient: 'from-indigo-400 to-blue-500',
+    gradient: 'from-cyber-500/20 to-indigo-500/20',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
@@ -73,7 +73,7 @@ const docTypeIcons: Record<string, { gradient: string; icon: React.ReactNode }> 
     ),
   },
   receipt: {
-    gradient: 'from-amber-400 to-orange-500',
+    gradient: 'from-amber-500/20 to-orange-500/20',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
@@ -83,7 +83,7 @@ const docTypeIcons: Record<string, { gradient: string; icon: React.ReactNode }> 
     ),
   },
   other: {
-    gradient: 'from-gray-400 to-slate-500',
+    gradient: 'from-slate-500/20 to-gray-500/20',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
@@ -142,7 +142,7 @@ export default function DocumentList() {
       <div className="flex items-center justify-center py-20">
         <div className="flex flex-col items-center gap-4">
           <div className="spinner" />
-          <p className="text-gray-500 font-medium">Loading documents...</p>
+          <p className="text-cyber-200/60 font-medium">Loading documents...</p>
         </div>
       </div>
     );
@@ -153,23 +153,23 @@ export default function DocumentList() {
       {/* Header */}
       <div className="flex items-center justify-between slide-up">
         <div>
-          <h2 className="text-3xl font-bold text-gray-900">Your Documents</h2>
-          <p className="text-gray-500 mt-1">{documents.length} document{documents.length !== 1 ? 's' : ''} uploaded</p>
+          <h2 className="text-3xl font-bold text-white">Your Documents</h2>
+          <p className="text-cyber-200/60 mt-1">{documents.length} document{documents.length !== 1 ? 's' : ''} uploaded</p>
         </div>
       </div>
 
       {/* Empty State */}
       {documents.length === 0 ? (
         <div className="glass-card-static p-16 text-center slide-up slide-up-delay-1">
-          <div className="w-24 h-24 mx-auto mb-6 rounded-3xl bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 flex items-center justify-center float-animation">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-indigo-400">
+          <div className="w-24 h-24 mx-auto mb-6 rounded-3xl bg-gradient-to-br from-cyber-500/10 to-cyan-500/10 border border-cyber-500/20 flex items-center justify-center float-animation">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-cyber-500">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
               <polyline points="17 8 12 3 7 8" />
               <line x1="12" y1="3" x2="12" y2="15" />
             </svg>
           </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-2">No documents yet</h3>
-          <p className="text-gray-500 max-w-sm mx-auto">
+          <h3 className="text-xl font-bold text-white mb-2">No documents yet</h3>
+          <p className="text-cyber-200/60 max-w-sm mx-auto">
             Upload your first document to start protecting your sensitive data
           </p>
         </div>
@@ -181,7 +181,7 @@ export default function DocumentList() {
               <div
                 key={doc.id}
                 className={`glass-card p-6 cursor-pointer group slide-up slide-up-delay-${(index % 4) + 1} ${
-                  selectedDoc?.id === doc.id ? 'ring-2 ring-indigo-500 shadow-lg shadow-indigo-100' : ''
+                  selectedDoc?.id === doc.id ? 'ring-2 ring-cyber-500 shadow-lg shadow-cyber-500/20' : ''
                 }`}
                 onClick={() => {
                   setSelectedDoc(doc);
@@ -190,33 +190,33 @@ export default function DocumentList() {
               >
                 {/* Header */}
                 <div className="flex items-start justify-between mb-4">
-                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${docStyle.gradient} flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform`}>
+                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${docStyle.gradient} border border-cyber-500/20 flex items-center justify-center text-cyber-700 group-hover:scale-110 transition-transform`}>
                     {docStyle.icon}
                   </div>
                   {doc.pii_detected && (
-                    <div className="flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-red-100 to-rose-100 rounded-full">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-red-500">
+                    <div className="flex items-center gap-1.5 px-3 py-1.5 bg-red-500/10 border border-red-500/20 rounded-full">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-red-400">
                         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                       </svg>
-                      <span className="text-xs font-bold text-red-600">Protected</span>
+                      <span className="text-xs font-bold text-red-400">Protected</span>
                     </div>
                   )}
                 </div>
 
                 {/* Content */}
-                <h3 className="font-bold text-gray-900 text-lg mb-1 truncate group-hover:text-indigo-600 transition-colors">
+                <h3 className="font-bold text-white text-lg mb-1 truncate group-hover:text-cyber-700 transition-colors">
                   {doc.filename}
                 </h3>
-                <p className="text-sm text-gray-500 mb-4">
+                <p className="text-sm text-cyber-200/60 mb-4">
                   {doc.chunk_count} chunk{doc.chunk_count !== 1 ? 's' : ''} indexed
                 </p>
 
                 {/* Footer */}
-                <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700 capitalize">
+                <div className="flex items-center justify-between pt-4 border-t border-cyber-500/10">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-cyber-500/10 text-cyber-700 border border-cyber-500/20 capitalize">
                     {doc.doc_type.replace('_', ' ')}
                   </span>
-                  <span className="text-xs text-gray-400">
+                  <span className="text-xs text-cyber-200/40">
                     {new Date(doc.created_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
                   </span>
                 </div>
@@ -231,29 +231,29 @@ export default function DocumentList() {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
           {/* Backdrop */}
           <div 
-            className="absolute inset-0 bg-black/40 backdrop-blur-sm"
+            className="absolute inset-0 bg-navy-dark/80 backdrop-blur-sm"
             onClick={() => { setSelectedDoc(null); setDocDetails(null); }}
           />
           
           {/* Modal */}
-          <div className="relative w-full max-w-2xl max-h-[85vh] overflow-y-auto bg-white rounded-3xl shadow-2xl scale-in">
+          <div className="relative w-full max-w-2xl max-h-[85vh] overflow-y-auto bg-navy-surface border border-cyber-500/20 rounded-3xl shadow-2xl scale-in">
             {/* Header */}
-            <div className="sticky top-0 z-10 bg-white/90 backdrop-blur-lg border-b border-gray-100 p-6 rounded-t-3xl">
+            <div className="sticky top-0 z-10 bg-navy-surface/90 backdrop-blur-lg border-b border-cyber-500/10 p-6 rounded-t-3xl">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-4">
-                  <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${docTypeIcons[docDetails.doc_type]?.gradient || docTypeIcons.other.gradient} flex items-center justify-center text-white`}>
+                  <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${docTypeIcons[docDetails.doc_type]?.gradient || docTypeIcons.other.gradient} border border-cyber-500/20 flex items-center justify-center text-cyber-700`}>
                     {docTypeIcons[docDetails.doc_type]?.icon || docTypeIcons.other.icon}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900">{docDetails.filename}</h3>
-                    <p className="text-sm text-gray-500 capitalize">{docDetails.doc_type?.replace('_', ' ')}</p>
+                    <h3 className="text-xl font-bold text-white">{docDetails.filename}</h3>
+                    <p className="text-sm text-cyber-200/60 capitalize">{docDetails.doc_type?.replace('_', ' ')}</p>
                   </div>
                 </div>
                 <button
                   onClick={() => { setSelectedDoc(null); setDocDetails(null); }}
-                  className="w-10 h-10 rounded-xl bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors"
+                  className="w-10 h-10 rounded-xl bg-navy-elevated hover:bg-navy-surface flex items-center justify-center transition-colors"
                 >
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-gray-500">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-cyber-200/60">
                     <line x1="18" y1="6" x2="6" y2="18" />
                     <line x1="6" y1="6" x2="18" y2="18" />
                   </svg>
@@ -265,13 +265,13 @@ export default function DocumentList() {
             <div className="p-6 space-y-6">
               {/* Stats */}
               <div className="grid grid-cols-2 gap-4">
-                <div className="p-4 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl">
-                  <p className="text-sm text-gray-500 mb-1">Chunks</p>
-                  <p className="text-2xl font-bold text-gray-900">{docDetails.chunk_count}</p>
+                <div className="p-4 bg-cyber-500/10 border border-cyber-500/20 rounded-2xl">
+                  <p className="text-sm text-cyber-200/60 mb-1">Chunks</p>
+                  <p className="text-2xl font-bold text-white">{docDetails.chunk_count}</p>
                 </div>
-                <div className={`p-4 rounded-2xl ${docDetails.pii_detected ? 'bg-gradient-to-br from-red-50 to-rose-50' : 'bg-gradient-to-br from-green-50 to-emerald-50'}`}>
-                  <p className="text-sm text-gray-500 mb-1">Security</p>
-                  <p className={`text-2xl font-bold ${docDetails.pii_detected ? 'text-red-600' : 'text-green-600'}`}>
+                <div className={`p-4 rounded-2xl ${docDetails.pii_detected ? 'bg-red-500/10 border border-red-500/20' : 'bg-green-500/10 border border-green-500/20'}`}>
+                  <p className="text-sm text-cyber-200/60 mb-1">Security</p>
+                  <p className={`text-2xl font-bold ${docDetails.pii_detected ? 'text-red-400' : 'text-green-400'}`}>
                     {docDetails.pii_detected ? 'Protected' : 'Clean'}
                   </p>
                 </div>
@@ -279,23 +279,23 @@ export default function DocumentList() {
 
               {/* PII Flags */}
               {docDetails.pii_detected && docDetails.pii_flags?.length > 0 && (
-                <div className="p-5 bg-gradient-to-r from-red-50 to-rose-50 rounded-2xl border border-red-100">
-                  <h4 className="font-bold text-red-700 mb-3 flex items-center gap-2">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-red-500">
+                <div className="p-5 bg-red-500/10 border border-red-500/20 rounded-2xl">
+                  <h4 className="font-bold text-red-400 mb-3 flex items-center gap-2">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-red-400">
                       <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                     </svg>
                     Sensitive Data Detected ({docDetails.pii_flags.length} items)
                   </h4>
                   <div className="space-y-2">
                     {docDetails.pii_flags.map((flag: any, i: number) => (
-                      <div key={i} className="flex items-center justify-between p-3 bg-white/60 rounded-xl">
+                      <div key={i} className="flex items-center justify-between p-3 bg-navy-elevated/50 rounded-xl">
                         <div className="flex items-center gap-3">
                           <span className={`px-2 py-0.5 rounded text-xs font-bold uppercase severity-${flag.severity}`}>
                             {flag.type}
                           </span>
-                          <span className="text-sm text-gray-600 font-mono">{flag.matched_text}</span>
+                          <span className="text-sm text-cyber-200/80 font-mono">{flag.matched_text}</span>
                         </div>
-                        <span className="text-xs text-gray-400">{(flag.confidence * 100).toFixed(0)}%</span>
+                        <span className="text-xs text-cyber-200/40">{(flag.confidence * 100).toFixed(0)}%</span>
                       </div>
                     ))}
                   </div>
@@ -305,8 +305,8 @@ export default function DocumentList() {
               {/* Key Dates */}
               {docDetails.key_dates?.length > 0 && (
                 <div>
-                  <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-blue-500">
+                  <h4 className="font-bold text-white mb-3 flex items-center gap-2">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-cyber-500">
                       <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
                       <line x1="16" y1="2" x2="16" y2="6" />
                       <line x1="8" y1="2" x2="8" y2="6" />
@@ -315,7 +315,7 @@ export default function DocumentList() {
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {docDetails.key_dates.map((d: any, i: number) => (
-                      <span key={i} className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-700 text-sm font-medium rounded-lg">
+                      <span key={i} className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-cyber-500/10 text-cyber-700 text-sm font-medium rounded-lg border border-cyber-500/20">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                           <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
                         </svg>
@@ -329,8 +329,8 @@ export default function DocumentList() {
               {/* Key Amounts */}
               {docDetails.key_amounts?.length > 0 && (
                 <div>
-                  <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-purple-500">
+                  <h4 className="font-bold text-white mb-3 flex items-center gap-2">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-cyan-400">
                       <line x1="12" y1="1" x2="12" y2="23" />
                       <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
                     </svg>
@@ -338,7 +338,7 @@ export default function DocumentList() {
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {docDetails.key_amounts.map((a: any, i: number) => (
-                      <span key={i} className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 text-sm font-medium rounded-lg">
+                      <span key={i} className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-cyan-500/10 text-cyan-400 text-sm font-medium rounded-lg border border-cyan-500/20">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                           <line x1="12" y1="1" x2="12" y2="23" />
                           <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
